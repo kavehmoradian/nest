@@ -16,18 +16,6 @@ model User {
   pass_hash  String
   username String @unique
 
-  posts Post[]
-
   @@map("users")
 }
 
-model Post {
-  id Int @id @default(autoincrement())
-  body String
-  createdAt   DateTime @default(now())
-
-  userId Int
-  user   User @relation(fields: [userId], references: [id])
-  
-  @@map("posts")
-}
