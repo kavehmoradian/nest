@@ -10,7 +10,7 @@ export class Login {
   @IsString()
   @IsNotEmpty()
   @ApiProperty()
-  password: String;
+  password: string;
 }
 export class Register {
   @IsEmail()
@@ -21,10 +21,10 @@ export class Register {
   @IsString()
   @IsNotEmpty()
   @ApiProperty()
-  username: String;
+  username: string;
 
   @IsString()
   @IsNotEmpty()
   @ApiProperty()
-  password: String;
+  password: string;
 }
